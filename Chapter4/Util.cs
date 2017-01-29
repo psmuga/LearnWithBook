@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 namespace Chapter4
 {
     //public delegate int Transformer(int x);
-
     public delegate void ProgressReporter(int percentComplete);
-
     public delegate T Transformer<T>(T arg);
+
     class Util
     {
         //public static void Transform(int[] values, Transformer t)
@@ -36,5 +35,13 @@ namespace Chapter4
                 values[i] = t(values[i]);
             }
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + " moja klasa testowa";
+        }
+
+
+
     }
 }
