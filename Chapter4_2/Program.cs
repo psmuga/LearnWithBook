@@ -11,7 +11,15 @@ namespace Chapter4_2
         static void Main(string[] args)
         {
 
+            try
+            {
 
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }
