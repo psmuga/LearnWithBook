@@ -34,12 +34,21 @@ namespace Chapter4
             //var stock = new Stock("Tel") {Price = 10};
             //Console.WriteLine(stock.Price);
 
-            Stock stock = new Stock("Cos");
-            stock.Price = 27.1M;
-
-            //rejestracja w zdarzeniu PriceChanged
+            Stock stock = new Stock("Cos") {Price = 27.1M};
             stock.PriceChanged += stock_PriceChanged;
             stock.Price = 31.59M;
+
+            //funkcja anonimowa
+            int factor = 2;
+            Func<int, int> multiplier = x => x * factor;
+            Console.WriteLine(multiplier(3));
+            factor = 3;
+            Console.WriteLine(multiplier(3));//9 bo do lambdy przyjmuje wartosc dopiero w momencie wywołania
+
+
+
+
+
 
             Console.ReadKey();
         }

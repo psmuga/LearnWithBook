@@ -53,11 +53,11 @@ namespace Chapter4.Event
 
     public class Stock
     {
-        private string symbol;
+        private string _symbol;
         private decimal price;
         public Stock(string symbol)
         {
-            this.symbol = symbol;
+            _symbol = symbol;
         }
 
         public event EventHandler<PriceChangedEventArgs> PriceChanged;
