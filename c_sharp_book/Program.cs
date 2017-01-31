@@ -143,6 +143,11 @@ namespace c_sharp_book
             //sealed uniemożliwia nadpisanie funkcji lub klasy
 
 
+
+            Test first = new Test();
+            Test drugi = first + 1;
+            drugi += 2;//możemy bo przeładowalismy + i automatycznie operator += jest przełądowany
+
             Console.ReadKey();
         }
 

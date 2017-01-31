@@ -29,6 +29,13 @@ class Test : IInterface1
         Botoom = 8
     }
 
+
+    public static Test operator +(Test x, decimal y)
+    {
+        x.CurrentPrice += y;
+        return x;
+    }
+
     public void Foo()
     {
         BorderSide a = BorderSide.Right;
