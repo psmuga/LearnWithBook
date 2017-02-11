@@ -24,8 +24,13 @@ namespace Chapter6_2
         }
         public bool Equals(Area other) => Measure1 == other.Measure1 && Measure2 == other.Measure2;
 
-        public override int GetHashCode() => Measure2 * 31 + Measure1;
-
+        public override int GetHashCode()
+        {
+            int hash = 17;//jakas liczba pierwsza
+            hash = hash * 31 + Measure1.GetHashCode();
+            hash = hash * 31 + Measure2.GetHashCode();
+            return hash
+        }
         public static bool operator == (Area a1, Area a2) => a1.Equals(a2);
         public static bool operator != (Area a1, Area a2) => !a1.Equals(a2);
     }

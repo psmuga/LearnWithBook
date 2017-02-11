@@ -108,10 +108,10 @@ namespace Chapter6_2
             Console.Title = "Hello";
 
             //statyczna klasa System.Envionment
-            Console.WriteLine(Environment.UserName);
+            //Console.WriteLine(Environment.UserName);
 
             //Klasa Process
-            System.Diagnostics.Process.Start("plik.txt");
+            //System.Diagnostics.Process.Start("plik.txt");
 
 
 
