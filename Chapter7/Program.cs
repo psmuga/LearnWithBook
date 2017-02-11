@@ -77,22 +77,33 @@ namespace Chapter7
             //SortedDictionary<,> bazuje na drzewie czerwono czarnym // znacznie szybsza od sortedlist
             //SortedList<,> // umożliwia odnoszenies ie po inedksie
 
-            //uzycie refleksji czyli info system o samym sobie
-            var sorted = new SortedDictionary<string, MethodInfo>();
-            foreach (var m in typeof(object).GetMethods())
-            {
-                sorted[m.Name] = m;
-            }
-            foreach (string name in sorted.Keys)
-                Console.WriteLine(name);
-            foreach (var m in sorted.Values)
-                Console.WriteLine(m.Name + " zwraca obiekt typu " + m.ReturnType);
-            
-            
-            
-            
-            
-                
+            ////uzycie refleksji czyli info system o samym sobie
+            //var sorted = new SortedDictionary<string, MethodInfo>();
+            //foreach (var m in typeof(object).GetMethods())
+            //{
+            //    sorted[m.Name] = m;
+            //}
+            //foreach (string name in sorted.Keys)
+            //    Console.WriteLine(name);
+            //foreach (var m in sorted.Values)
+            //    Console.WriteLine(m.Name + " zwraca obiekt typu " + m.ReturnType);
+            ////kiedy trzeba wstawic kilka elementow pod tym samy kluczem to np SortedList<string,List<int>>
+
+            //int[] a1 = { 1, 2, 3 };
+            //int[] a2 = { 1, 2, 3 };
+            //Console.WriteLine(a1.Equals(a2)); // fałsz
+            //IStructuralEquatable se1 = a1;
+            //Console.WriteLine(se1.Equals(a2, EqualityComparer<int>.Default));//true
+
+            //Collection<T>
+            //ReadOnlyCollection<T>
+            //KeyedCollection<Tkey,TItem>
+            //IEqualityComparer i EqualityCOmparer  głownie do dictionary i hashtable
+            //EqualityComoparer<T>.Default.Equals(); //można stosowac zamiast object.Equals          
+            //IComparer i Commparer
+            //StringComparer
+            //IStructuralEquatable i IstructuralComparable    
+
             Console.ReadKey();
         }
     }
