@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contacts>
+  <customer id="1">
+    <firstname>Piotr</firstname>
+    <lastname>Smuga</lastname>
+  </customer>
+  <customer id="2">
+    <firstname>Marcin</firstname>
+    <lastname>Smuga</lastname>
+  </customer>
+  <customer>
+    <firstname>Dawid</firstname>
+    <lastname>Smuga</lastname>
+  </customer>
+  <supplier>
+    <name>Dostawca</name>
+  </supplier>
+</contacts>
