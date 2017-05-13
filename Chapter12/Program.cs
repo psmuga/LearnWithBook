@@ -9,34 +9,39 @@ using System.Threading.Tasks;
 
 namespace Chapter12
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var p = new Program();
 
 
             //żużycie pamięci przez ten process
             var procName = Process.GetCurrentProcess().ProcessName;
-            using (PerformanceCounter pc = new PerformanceCounter("Process", "Private Bytes", procName))
+            using (var pc = new PerformanceCounter("Process", "Private Bytes", procName))
+            {
                 Console.WriteLine(pc.NextValue());
+            }
             GCSettings.LatencyMode = GCLatencyMode.LowLatency;
     
-           p.funkcja();
+            p.funkcja();
             GC.Collect();
             Thread.Sleep(1000);
             foreach (var VARIABLE in TempFileRef._failedDeletions)
-            {
                 Console.WriteLine(VARIABLE.DeletionError);
-            }
+
+
+            //słabe odwołania str 507
+
+
 
             Console.ReadKey();
         }
 
-        void funkcja()
+        private void funkcja()
         {
-            TempFileRef a = new TempFileRef("ala.txt");
-            TempFileRef b = new TempFileRef("ala.txt");
+            var a = new TempFileRef("ala.txt");
+            var b = new TempFileRef("ala.txt");
             Console.WriteLine(a.FilePath);
             Console.WriteLine(b.FilePath);
             GC.Collect();

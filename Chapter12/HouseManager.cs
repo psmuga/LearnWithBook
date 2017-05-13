@@ -8,7 +8,7 @@ namespace Chapter12
 {
 
     //wzorzec zwalniania zasobów na żądanie użytkownika
-    class HouseManager :IDisposable
+    internal class HouseManager :IDisposable
     {
         private readonly bool _checkMailOnDispose;
 
