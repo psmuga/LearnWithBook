@@ -410,11 +410,10 @@ namespace Chapter14
             //}
 
             int[] res = await Task.WhenAll(delay1(), delay2());//zwaraca sume z wszystkich wywolanych taskó
-
-            Task<int> all = MyExtensions.WithTimeOut(delay1(), 500);
+            Task<int> test = delay1().WithTimeOut(500);
             try
             {
-                await all;
+                await test;
 
             }
             catch 
