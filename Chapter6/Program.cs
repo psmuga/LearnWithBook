@@ -69,10 +69,10 @@ namespace Chapter6
             //sb.AppendLine(); //dodaje znak nowej lini
             //Console.WriteLine(sb.ToString());
 
-            //foreach (EncodingInfo info in Encoding.GetEncodings())
-            //{
-            //    Console.WriteLine(info.Name);
-            //}
+            foreach (EncodingInfo info in Encoding.GetEncodings())
+            {
+                Console.WriteLine(info.Name);
+            }
 
             //zapisuje wszystko w pliku z kodowaniem Unicode zamiast domyslnie utf-8
             //System.IO.File.WriteAllText("dane.txt", "Testowanie...", Encoding.Unicode);

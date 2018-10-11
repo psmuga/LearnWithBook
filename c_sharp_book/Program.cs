@@ -33,19 +33,21 @@ namespace c_sharp_book
             //StringBuilder stb = new StringBuilder();
             //stb.Append("Ala ma kota");
 
-            //string a="co: ";
-            //int b = 0 ;
+            //string a = "co: ";
+            //int b = 0;
             //Foo test = new Foo();
             //test.first(ref a, out b);
-            //int c = test.suma_ile_chcesz(1,2,3,4,5,6,7,8,9,10);
+            //Console.WriteLine(a + ' ' + b);
+            //int c = test.suma_ile_chcesz(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
             //Console.WriteLine("Suma wynosi: {0}", c);
             ////dopasowuje wartości do odpowiednich argumentów
-            //test.dopasuj(y:2,x:1);
+            ////test.dopasuj(y: 2, x: 1);
 
 
             //Console.WriteLine("\a Alert");
 
             //string a2 = @"\\C:\cos\cos\al.cs";
+            //Console.WriteLine(a2);
             //int b = 4;
             //string a3 = $" Kot ma {b} łapy";
 
@@ -138,15 +140,15 @@ namespace c_sharp_book
             //string s = null;
             //Console.WriteLine(s?[2]);
 
-            //string names = nameof(StringBuilder) + "." + nameof(StringBuilder.Length); //"StringBuilder.Length"
-
+            string names = nameof(StringBuilder) + "." + nameof(StringBuilder.Length); //"StringBuilder.Length"
+            Console.WriteLine(names);
             //sealed uniemożliwia nadpisanie funkcji lub klasy
 
 
 
-            Test first = new Test();
-            Test drugi = first + 1;
-            drugi += 2;//możemy bo przeładowalismy + i automatycznie operator += jest przełądowany
+            //Test first = new Test();
+            //Test drugi = first + 1;
+            //drugi += 2;//możemy bo przeładowalismy + i automatycznie operator += jest przełądowany
 
             Console.ReadKey();
         }

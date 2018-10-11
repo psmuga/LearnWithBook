@@ -16,131 +16,130 @@ namespace Chapter4_2
         static unsafe void Main(string[] args)
         {
 
-           // try
-           // {
-           //     Dziel abc = x => 10 / x;
-           //     abc(0);
-           //     Console.WriteLine("Linia nastepna po  błędzie"); // nie  wyswiwtli 
-           // }
-           // catch (DivideByZeroException e) //when (e.    ) filtr wyjatku
-           // {
-           //     Console.WriteLine("blad ");
-           //     //throw;
-           // }
-           // catch 
-           // {
-           //     Console.WriteLine("every other exceptions");
-           // }
+            // try
+            // {
+            //     Dziel abc = x => 10 / x;
+            //     abc(0);
+            //     Console.WriteLine("Linia nastepna po  błędzie"); // nie  wyswiwtli 
+            // }
+            // catch (DivideByZeroException e) //when (e.    ) filtr wyjatku
+            // {
+            //     Console.WriteLine("blad ");
+            //     //throw;
+            // }
+            // catch 
+            // {
+            //     Console.WriteLine("every other exceptions");
+            // }
 
 
-           //// File.Create("file.txt");
-           // StreamReader reader = null;
-           // try
-           // {
-           //     reader = File.OpenText("file.txt");
-           //     if (reader.EndOfStream) return;
-           //     Console.WriteLine(reader.ReadToEnd());
-           // }
-           // finally
-           // {
-           //     //if (reader != null) reader.Dispose();
-           //     reader?.Dispose(); //to samo
-           // }
+            //// File.Create("file.txt");
+            // StreamReader reader = null;
+            // try
+            // {
+            //     reader = File.OpenText("file.txt");
+            //     if (reader.EndOfStream) return;
+            //     Console.WriteLine(reader.ReadToEnd());
+            // }
+            // finally
+            // {
+            //     //if (reader != null) reader.Dispose();
+            //     reader?.Dispose(); //to samo
+            // }
 
-           // using (var cosStreamReader = File.OpenText("File.txt")) //to jest równoważne z całym blokkiem try wyzej razem z stworzeniem readera
-           // {
-           //     Console.WriteLine(cosStreamReader.ReadToEnd());
-           // }
+            // using (var cosStreamReader = File.OpenText("File.txt")) //to jest równoważne z całym blokkiem try wyzej razem z stworzeniem readera
+            // {
+            //     Console.WriteLine(cosStreamReader.ReadToEnd());
+            // }
 
-           // //wzorzec metod tryXXX str 165
+            // //wzorzec metod tryXXX str 165
 
-           // var dic = new Dictionary<int, string>()
-           // {
-           //     {1,"ala" },
-           //     {2,"ma" }
-           // };
-           // var dict = new Dictionary<int,string>()
-           // {
-           //     [5] = "five",
-           //     [10] = "ten"
-           // };
-
-
-
-           // foreach (var x in Fibs(8))
-           // {
-           //     Console.Write(x + " ");
-           // }
-           // Console.WriteLine();  
-           // foreach (var x in ParzysteFib(Fibs(8)))
-           // {
-           //     Console.Write(x + " ");
-           // }
-           // Console.WriteLine();
+            // var dic = new Dictionary<int, string>()
+            // {
+            //     {1,"ala" },
+            //     {2,"ma" }
+            // };
+            // var dict = new Dictionary<int,string>()
+            // {
+            //     [5] = "five",
+            //     [10] = "ten"
+            // };
 
 
-           // foreach (var x in GetSequence(4,10))
-           // {
-           //     Console.Write(x + " ");
-           // }
-           // Console.WriteLine();
-           // var cos = (IEnumerator<int>) GetSequence(2, 8).GetEnumerator();
-           // while (cos.MoveNext())
-           // {
-           //     Console.Write(cos.Current + " ");
-           // }
-           // Console.WriteLine();
 
-           // var test = new Word();
-           // Console.WriteLine(test[1]);
-           // foreach (var VARIABLE in Word.Zdanie())
-           // {
-           //     Console.Write(VARIABLE + " ");
-           // }
-           // Console.WriteLine();
+            // foreach (var x in Fibs(8))
+            // {
+            //     Console.Write(x + " ");
+            // }
+            // Console.WriteLine();  
+            // foreach (var x in ParzysteFib(Fibs(8)))
+            // {
+            //     Console.Write(x + " ");
+            // }
+            // Console.WriteLine();
 
 
-           // int? zmienna = null; // dopuszczajaca null
-           // zmienna =1;
-           // var y = (int) zmienna;
-           // Console.WriteLine(zmienna);
+            // foreach (var x in GetSequence(4,10))
+            // {
+            //     Console.Write(x + " ");
+            // }
+            // Console.WriteLine();
+            // var cos = (IEnumerator<int>) GetSequence(2, 8).GetEnumerator();
+            // while (cos.MoveNext())
+            // {
+            //     Console.Write(cos.Current + " ");
+            // }
+            // Console.WriteLine();
 
-           // object o = "cosik";
-           // int? a = o as int?; // null gdyz nie da sie przekonwertowac stringa na int
-           // Console.WriteLine(a);
+            // var test = new Word();
+            // Console.WriteLine(test[1]);
+            // foreach (var VARIABLE in Word.Zdanie())
+            // {
+            //     Console.Write(VARIABLE + " ");
+            // }
+            // Console.WriteLine();
+
+
+            int? zmienna = null; // dopuszczajaca null
+            zmienna = 1;
+            var y = (int)zmienna;
+            Console.WriteLine(zmienna);
+
+            // object o = "cosik";
+            // int? a = o as int?; // null gdyz nie da sie przekonwertowac stringa na int
+            // Console.WriteLine(a);
 
 
             //Console.WriteLine("Hello".IsCapitalized()); // z klasy Klasa metoda rozszerzajaca
 
 
 
-            //typy anonimowe
-            var dude = new {Name="Piotr",Age = 23};
-            Console.WriteLine(dude.Age);
+            ////typy anonimowe
+            //var dude = new {Name="Piotr",Age = 23};
+            //Console.WriteLine(dude.Age);
 
 
-            Foo();
-            #region moj
+            //Foo();
+            //#region moj
 
-            Program abcd = new Program();   
-            unsafe //properties -> debug ->allow unsafe code
-            {
-                fixed (int* p = &abcd.x)
-                {
-                    *p = 9;
-                }
-                Console.WriteLine(abcd.x);
-            }
+            //Program abcd = new Program();   
+            //unsafe //properties -> debug ->allow unsafe code
+            //{
+            //    fixed (int* p = &abcd.x)
+            //    {
+            //        *p = 9;
+            //    }
+            //    Console.WriteLine(abcd.x);
+            //}
 
 
-            int* a = stackalloc int[10]; // alokacja na stosie i ogranicozne do istnienia np w funkcji
-            for (int i = 0; i < 10; i++)
-            {
-                Console.Write(a[i] + " ");
-            }
-            #endregion
+            //int* a = stackalloc int[10]; // alokacja na stosie i ogranicozne do istnienia np w funkcji
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.Write(a[i] + " ");
+            //}
+            //#endregion
 
-            
 
 
 

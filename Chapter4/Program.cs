@@ -20,8 +20,8 @@ namespace Chapter4
         static void Main(string[] args)
         {
             //var program = new Program();
-            //int[] val = {1, 2, 3};
-            //Util.Transform(val,Square);
+            //int[] val = { 1, 2, 3 };
+            //Util.Transform(val, Square);
             //foreach (var i in val)
             //{
             //    Console.WriteLine(i);
@@ -31,12 +31,12 @@ namespace Chapter4
             //Util.DoHardWork(p);
 
 
-            //var stock = new Stock("Tel") {Price = 10};
+            //var stock = new Stock("Tel") { Price = 10 };
             //Console.WriteLine(stock.Price);
 
-            Stock stock = new Stock("Cos") {Price = 27.1M};
-            stock.PriceChanged += stock_PriceChanged;
-            stock.Price = 31.59M;
+            //Stock stock = new Stock("Cos") { Price = 27.1M };
+            //stock.PriceChanged += stock_PriceChanged;
+            //stock.Price = 31.59M;
 
             //funkcja anonimowa
             int factor = 2;
